@@ -4,5 +4,6 @@
   chef: @recipe.chef,
   ingredients: @recipe.ingredients,
   directions: @recipe.directions,
+  image_url: @recipe.image_url,
   prep_time: @recipe.prep_time
 }
