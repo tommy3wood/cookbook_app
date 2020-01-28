@@ -13,4 +13,15 @@ class Api::UsersController < ApplicationController
     end
     
   end
+
+  def update
+    @user = User.find(params[:id])
+
+    @user.name = params[:name] || @user.name
+    @user.email = params[:email] || @user.email
+
+
+    @user.save
+    render json: {message: "update complete"}
+  end
 end

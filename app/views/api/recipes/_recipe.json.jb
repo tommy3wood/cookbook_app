@@ -1,7 +1,7 @@
 {
   id: recipe.id,
   title: recipe.title,
-  chef: recipe.chef,
+  chef: recipe.user.name,
   ingredients: recipe.ingredients,
   directions: recipe.directions,
   image_url: recipe.image_url,
