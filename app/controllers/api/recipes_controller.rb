@@ -27,7 +27,7 @@ class Api::RecipesController < ApplicationController
 
   def show
       @recipe = Recipe.find(params[:id])
-      render 'show.json.jb'
+      render 'show.json.rb'
   end
 
   def update
