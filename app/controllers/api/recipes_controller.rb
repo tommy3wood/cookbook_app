@@ -16,18 +16,18 @@ class Api::RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(
                           title: params[:title], 
-                          user_id: current_user.id,
+                          user_id: 1, #current_user.id,
                           ingredients: params[:ingredients],
                           directions: params[:directions],
                           prep_time: params[:prep_time]
                           )
     @recipe.save
-    render 'show.json.jb' #It would be pointless to create a viewer for a post action. So instead you render a viewer that displays individual id's
+    render 'index.json.jb' 
   end
 
   def show
       @recipe = Recipe.find(params[:id])
-      render 'show.json.rb'
+      render 'show.json.jb'
   end
 
   def update
