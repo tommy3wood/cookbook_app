@@ -19,7 +19,8 @@ class Api::RecipesController < ApplicationController
                           user_id: 1, #current_user.id,
                           ingredients: params[:ingredients],
                           directions: params[:directions],
-                          prep_time: params[:prep_time]
+                          prep_time: params[:prep_time],
+                          image_url: params[:image_url]
                           )
     @recipe.save
     render 'index.json.jb' 
